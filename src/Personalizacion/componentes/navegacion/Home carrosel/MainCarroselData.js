@@ -4,19 +4,18 @@ export const mainCarroselData=[
         path:"#" 
     },
     {
-        image: "https://i.imgur.com/CIQQ1tf.png",
+        image: "https://i.imgur.com/uqB124i.jpg",
         path: "#"
     },
     {
-        image:"https://i.imgur.com/uqB124i.jpg",
-        path:"#" 
-    },
-    {
-        image: "https://i.imgur.com/T6trwx1.png",
+        image: "https://i.imgur.com/CIQQ1tf.png",
         path: "#"
     },
     {
         image: "https://i.imgur.com/Efb9oiY.png",
         path: "#"
-    } 
+    },{
+        image: "https://i.imgur.com/T6trwx1.png",
+        path: "#"
+    },
 ]
