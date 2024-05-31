@@ -1,5 +1,6 @@
 import React from "react";
 import MainCarrosel from "../componentes/navegacion/Home carrosel/MainCarrosel";
+import HomeSectionCarrusel from "../componentes/navegacion/HomeSectionCarrusel/HomeSectionCarrusel";
 
 const HomePage = () => {
     return (
@@ -7,7 +8,7 @@ const HomePage = () => {
           <MainCarrosel/>
   
           <div>
-              Other Section
+              <HomeSectionCarrusel/>
           </div>
       </div>
     )
