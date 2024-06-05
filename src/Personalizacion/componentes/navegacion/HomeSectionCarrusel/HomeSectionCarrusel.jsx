@@ -15,7 +15,7 @@ const HomeSectionCarrusel = () => {
     const items = [1, 1, 1, 1, 1].map((item, index) => <HomeSectionCard key={index} />);  // Agregar una key única a cada elemento
 
     return (
-        <div className="relative px-4 lg:px-8 border border-black">
+        <div className="px-4 lg:px-8 border border-black">
             <div className="relative p-5 border">
                 <AliceCarousel
                     items={items}
