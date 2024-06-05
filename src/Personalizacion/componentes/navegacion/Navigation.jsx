@@ -54,11 +54,12 @@ const navigation = {
           id: 'brands',
           name: 'Brands',
           items: [
-            { name: 'Full Nelson', href: '#' },
+            { name: 'Manjar Blanco', href: '#' },
             { name: 'My Way', href: '#' },
             { name: 'Re-Arranged', href: '#' },
             { name: 'Counterfeit', href: '#' },
             { name: 'Significant Other', href: '#' },
+            { name: 'Cocada', href: '#'}
           ],
         },
       ],
@@ -277,9 +278,9 @@ export default function Navigation() {
       </Transition.Root>
 
       <header className="relative bg-white">
+
         <p className="flex h-10 items-center justify-center bg-red-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          10% con el segundo articulo
-        </p>
+          10% con el segundo articulo</p>
 
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
