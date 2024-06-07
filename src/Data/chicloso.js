@@ -7,7 +7,11 @@ export const chicloso = [
         "discountprice": 500,
         "price": 650,
         "discountpersent": 23,
-        "descripcion": "El Turrón, una delicia que viaja desde las tierras mediterráneas hasta las montañas colombianas, trae consigo un legado de sabores ancestrales. Este exquisito manjar, originalmente creado en las regionesde Italia y Francia, ha encontrado un nuevo hogar en Colombia, donde se ha fusionado armoniosamente con las recetas tradicionales de la pastelería suiza. Con una combinación única de miel, azúcar, maní y café, el Turrón colombiano se presenta en una variedad de texturas, desde suaves y esponjosas hasta firmes y crujientes. Su proceso de elaboración se mantiene fiel a las técnicas artesanales, honrando así su autenticidad y herencia culinaria.Sumérgete en el mundo de los sabores con este dulce tesoro, donde cada bocado es un viaje sensorial a través de la rica historia gastronómica de Colombia."
+        "quantuty": 100,
+        "topLabelCategory": "Turrón",
+        "secondLabelCategory": "Chicloso",
+        "thirdLabelCategory": "Miel",
+        "description": "El Turrón, una delicia que viaja desde las tierras mediterráneas hasta las montañas colombianas, trae consigo un legado de sabores ancestrales. Este exquisito manjar, originalmente creado en las regionesde Italia y Francia, ha encontrado un nuevo hogar en Colombia, donde se ha fusionado armoniosamente con las recetas tradicionales de la pastelería suiza. Con una combinación única de miel, azúcar, maní y café, el Turrón colombiano se presenta en una variedad de texturas, desde suaves y esponjosas hasta firmes y crujientes. Su proceso de elaboración se mantiene fiel a las técnicas artesanales, honrando así su autenticidad y herencia culinaria.Sumérgete en el mundo de los sabores con este dulce tesoro, donde cada bocado es un viaje sensorial a través de la rica historia gastronómica de Colombia."
     },
     {
         "imageUrl": "https://i.imgur.com/T6trwx1.png",
@@ -20,7 +24,7 @@ export const chicloso = [
         "descripcion": "Sumérgete en la experiencia sensorial de nuestro dulce artesanal de guayaba, un manjar que encarna la esencia misma del sabor colombiano. Cada bocado es una explosión de sabores auténticos y frescos que te transportarán a los campos frutales de nuestra tierra. Con su textura delicadamente elaborada y su sabor inigualable, este dulce te ofrece un momento de placer gastronómico dondequiera que estés. Disfruta de la magia de Colombia con cada mordisco y déjate seducir por la dulzura de nuestra tradición culinaria."
     },
     {
-        "imageUrl": "https://i.imgur.com/T6trwx1.png",
+        "imageUrl": "https://i.imgur.com/yg1jILy.jpg",
         "brand": "SuperCoco",
         "title": "Turron SuperCoco",
         "peso": "250gr",
@@ -31,7 +35,7 @@ export const chicloso = [
     },
     {
         "imageUrl": "https://i.imgur.com/CIQQ1tf.png",
-        "brand": "Colobina",
+        "brand": "Colombina",
         "title": "Chomelos",
         "peso": "90gr",
         "discountprice": 5621,
