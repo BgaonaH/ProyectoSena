@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef} from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import HomeSectionCard from '../HomeSectionCard/HomeSectionCard';
@@ -7,7 +7,6 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
 const HomeSectionCarrusel = ({ data, sectionName }) => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [visibleItems, setVisibleItems] = useState(5); // Estado para almacenar el número de elementos visibles
 
     const carouselRef = useRef(null);
 
@@ -25,26 +24,11 @@ const HomeSectionCarrusel = ({ data, sectionName }) => {
         carouselRef.current.slideNext();
     };
 
-    // Efecto para calcular el número de elementos visibles en función del ancho de la ventana
-    useEffect(() => {
-        const handleResize = () => {
-            const windowWidth = window.innerWidth;
-            let itemsToShow = 5; // Valor predeterminado
-            if (windowWidth < 1024) {
-                itemsToShow = 3; // Si el ancho de la ventana es menor que 1024px, mostrar 3 elementos
-            } else if (windowWidth < 720) {
-                itemsToShow = +1; // Si el ancho de la ventana es menor que 720px, mostrar 1 elemento
-            }
-            setVisibleItems(itemsToShow);
-        };
-
-        window.addEventListener('resize', handleResize); // Escuchar eventos de cambio de tamaño de ventana
-
-        // Limpieza del evento al desmontar el componente
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+    const responsive = {
+        0: { items: 1 },
+        568: { items: 3 },
+        1024: { items: 5.5 }
+      };
 
     return (
         <div className="border">
@@ -52,13 +36,13 @@ const HomeSectionCarrusel = ({ data, sectionName }) => {
                 <h2 className='text-lg font-medium text-gray-900 line-clamp-1'>{sectionName}</h2>
                 <AliceCarousel
                     items={items}
-                    responsive={{ 0: { items: 1 }, 720: { items: 3 }, 1024: { items: 5 } }}
+                    responsive={responsive}
                     disableButtonsControls
                     disableDotsControls
                     activeIndex={activeIndex}
                     ref={carouselRef}
                 />
-                {activeIndex !== items.length - 1 && (
+                {activeIndex !== items.length - 5 && (
                     <Button
                         variant="contained"
                         className="z-50 bg-white"
