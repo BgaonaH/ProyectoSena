@@ -2,7 +2,7 @@ export const chicloso = [
     {
         "imageUrl": "https://i.imgur.com/5len0cX.jpg",
         "brand": "Artesanales",
-        "title": "Turrón tradicional Colombiano",
+        "title": "Turrón Colombiano",
         "peso": "250gr",
         "discountprice": 500,
         "price": 650,
@@ -16,11 +16,11 @@ export const chicloso = [
     {
         "imageUrl": "https://i.imgur.com/T6trwx1.png",
         "brand": "Dulces del valle",
-        "title": "Marqueta combinada DULCES DEL VALLE",
+        "title": "Marqueta Combinada ",
         "peso": "210gr",
         "discountprice": 8162,
         "price": 10600,
-        "discountpersent": 23,
+        "discountpersent": 10,
         "descripcion": "Sumérgete en la experiencia sensorial de nuestro dulce artesanal de guayaba, un manjar que encarna la esencia misma del sabor colombiano. Cada bocado es una explosión de sabores auténticos y frescos que te transportarán a los campos frutales de nuestra tierra. Con su textura delicadamente elaborada y su sabor inigualable, este dulce te ofrece un momento de placer gastronómico dondequiera que estés. Disfruta de la magia de Colombia con cada mordisco y déjate seducir por la dulzura de nuestra tradición culinaria."
     },
     {
