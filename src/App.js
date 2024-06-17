@@ -1,18 +1,20 @@
 //import logo from './logo.svg';
 import './App.css';
-import Navigation from '../src/Personalizacion/componentes/navegacion/Navigation.jsx';
-import HomePage from './Personalizacion/pages/HomePage.jsx';
-import Footer from './Personalizacion/componentes/navegacion/Footer/Footer.jsx';
-
+import Navigation from './Personalizacion/componentes/Navigation/Navigation.jsx';
+import HomePage from './Personalizacion/pages/Homepage/HomePage.jsx';
+import Footer from './Personalizacion/componentes/Footer/Footer.jsx';
+import Product from './Personalizacion/componentes/Product/Product.jsx';
 
 function App() {
   return (
     <div className="App">
-      <Navigation/>
-    <div>
-      <HomePage/>
-    </div>
-      <Footer/>
+     <div>
+        <Navigation/>
+      </div>
+        {/*<HomePage/>*/}
+        <Product/>
+        <Footer/>
+
     </div>
   );
 }

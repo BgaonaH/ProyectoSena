@@ -1,5 +1,6 @@
 import { Grid, Typography, Button } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-alice-carousel'
 const Footer = () => {
     return (
         <div>
@@ -56,7 +57,7 @@ const Footer = () => {
                         <Button className='pb-5' variant='h6' gutterBottom>Privacy</Button>
                     </div>
                     <div>
-                        <Button className='pb-5' variant='h6' gutterBottom>Terms</Button>
+                        <Button className='pb-5' variant='h6' gutterBottom>{" "}Terms</Button>
                     </div>
 
 
@@ -70,13 +71,13 @@ const Footer = () => {
                     </Typography>
                     <Typography variant='body2' component="p" align="center">
                         Icons made by{" "}
-                        {/*<link href="https://www.freepik.com" color='inherit' underline="always">
+                        <Link href="https://www.freepik.com/" color='inherit' underline="always">
                             Freepik
-                        </link>
-                        from
-                        <link href="https://www.flaticon.com" color='inherit' underline="always">
+                        </Link>
+                        from{" "}
+                        <Link href="https://www.flaticon.com" color='inherit' underline="always">
                             www.flaticon.com
-                        </link>*/}
+                        </Link>
 
                     </Typography>
 

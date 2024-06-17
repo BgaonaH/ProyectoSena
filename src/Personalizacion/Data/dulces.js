@@ -38,7 +38,6 @@ export const dulces =[
         "quantuty": 100,
         "topLabelCategory": "Dulces de anis",
         "secondLabelCategory": "Dulce",
-        "secondLabelCategory": "Dulce pack",
         "thirdLabelCategory": "Caramelo",
         "description": "Dulces con anis"
     }
