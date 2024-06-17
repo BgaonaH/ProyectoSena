@@ -19,6 +19,7 @@ import ProductCard from './ProductCard'
 import {filters, singleFilter} from './FilterData'
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@mui/material'
 import FilterListIcon from '@mui/icons-material/FilterList';
+import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 const sortOptions = [
   { name: 'Price: Low to High', href: '#', current: false },
   { name: 'Price: High to Low', href: '#', current: false },
@@ -31,7 +32,37 @@ function classNames(...classes) {
 
 export default function Product() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-  
+  const location=useLocation();
+  const navigate= useNavigate();
+  const handleFilter=(value, sectionId)=>{
+  const searchParams= new URLSearchParams(location.search)
+    
+    let filterValue=searchParams.getAll(sectionId)
+
+      if(filterValue.length>0 && filterValue[0].split(",").includes(value)){
+        filterValue = filterValue[0].split(",").filter((item) => item !== value);
+        if(filterValue.length===0){
+          searchParams.delete(sectionId)
+        }
+      }
+      else{
+        filterValue.push(value)
+      }
+      if(filterValue.length>0){
+        searchParams.set(sectionId,filterValue.join(","));
+      }
+        
+      const query = searchParams.toString();
+      navigate({ search: `?${query}`})
+  }
+
+const handleRadioFilterChange=(e, sectionId)=>{
+  const searchParams= new URLSearchParams(location.search)
+  searchParams.set(sectionId,e.target.value)
+  const query = searchParams.toString();
+  navigate({ search: `?${query}`})
+}
+
   return (
     <div className="bg-white">
       <div>
@@ -226,6 +257,7 @@ export default function Product() {
                               {section.options.map((option, optionIdx) => (
                                 <div key={option.value} className="flex items-center">
                                   <input
+                                    onChange={()=>handleFilter(option.value, section.id)}
                                     id={`filter-${section.id}-${optionIdx}`}
                                     name={`${section.id}[]`}
                                     defaultValue={option.value}
@@ -275,7 +307,7 @@ export default function Product() {
                                   {section.options.map((option, optionIdx) => (
 
                                     <>
-                                      <FormControlLabel value={option.id} control={<Radio />} label={option.label} />
+                          <FormControlLabel onChange={(e)=>handleRadioFilterChange(e, section.id) } value={option.value} control={<Radio />} label={option.label} />
 
                                     </>
 
@@ -293,7 +325,7 @@ export default function Product() {
               {/* Product grid */}
               <div className="lg:col-span-4 w-full">
                 <div className='flex flex-wrap justify-center bg-white py-5'>
-                {chicloso.map((item)=><ProductCard product={item}/>)}
+                {chicloso.map((item)=><ProductCard key={item.id} product={item}/>)}
                 </div>
               </div>
             </div>

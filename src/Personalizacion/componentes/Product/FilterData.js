@@ -5,21 +5,17 @@ export const filters = [
       options: [
         { value: 'new-arrivals', label: 'New Arrivals', checked: false },
         { value: 'sale', label: 'Sale', checked: false },
-        { value: 'travel', label: 'Travel', checked: true },
+        { value: 'travel', label: 'Travel', checked: false },
         { value: 'organization', label: 'Organization', checked: false },
         { value: 'accessories', label: 'Accessories', checked: false },
       ],
     },
     {
-      id: 'size',
-      name: 'Size',
+      id: 'marca',
+      name: 'Marca',
       options: [
-        { value: '2l', label: '2L', checked: false },
-        { value: '6l', label: '6L', checked: false },
-        { value: '12l', label: '12L', checked: false },
-        { value: '18l', label: '18L', checked: false },
-        { value: '20l', label: '20L', checked: false },
-        { value: '40l', label: '40L', checked: true },
+        { value: 'artesanales', label: 'Artesanales', checked: false },
+        { value: 'italo', label: 'Italo', checked: false },
       ],
     },
   ]
@@ -28,7 +24,7 @@ export const singleFilter =[
     id: "price",
     name: "Precio",
     options: [
-      {value: "5000-10000", label:"$5000-$10000"},
+      {value: "5000-10000", label:"$5000-$10000", checked: false},
       {value: "10000-15000", label:"$10000-$20000"},
       {value: "15000-20000", label:"$20000-$30000"},
       {value: "20000-25000", label:"$30000-$40000"},
