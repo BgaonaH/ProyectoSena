@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { StarIcon } from '@heroicons/react/20/solid';
 import { Radio, RadioGroup } from '@headlessui/react';
-import { Button, Grid, Rating } from '@mui/material';
+import { Box, Button, Grid, LinearProgress, Rating } from '@mui/material';
 import ProductReviewCard from './ProductReviewCard';
 
 const product = {
@@ -30,7 +30,7 @@ const product = {
       alt: 'Model wearing plain white basic tee.',
     },
   ],
-  
+
   description:
     'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
   highlights: [
@@ -49,7 +49,7 @@ function classNames(...classes) {
 }
 
 export default function ProductDetail() {
-  
+
   const [quantity, setQuantity] = useState(1); // Estado para mantener la cantidad de productos
 
   // Función para aumentar la cantidad de productos
@@ -65,7 +65,7 @@ export default function ProductDetail() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white lg:px-20">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
           <ol
@@ -153,7 +153,7 @@ export default function ProductDetail() {
               {/* Reviews */}
               <div className="mt-6">
                 <Rating name="read-only" value={reviews.average} readOnly />
-                <p className="opacity-50 text-sm">
+                <p className="opacity-50 text-sm text-left">
                   {reviews.totalCount} Reviews
                 </p>
               </div>
@@ -176,10 +176,11 @@ export default function ProductDetail() {
               </div>
 
               {/* Add to bag button */}
-              <Button variant='contained' sx={{px:"2rem", py:"1rem,", bgcolor:"red",
-                '&:hover': {bgcolor: '#cc0000',},
+              <Button variant='contained' sx={{
+                px: "2rem", py: "1rem,", bgcolor: "red",
+                '&:hover': { bgcolor: '#cc0000', },
               }}
-                
+
               >
                 Agregar al carrito
               </Button>
@@ -226,19 +227,82 @@ export default function ProductDetail() {
           </div>
         </section>
         {/*rating and reviews*/}
-        <section>
-      <h2 className='font-semibold text-lg pb-4'>Recent Reviews & Rating</h2>
-      <div className='border p-5'>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={7}>
-            <div className='space-y-5'>
-              {/* Aquí puedes colocar tu contenido */}
-              <ProductReviewCard />
-            </div>
-          </Grid>
-        </Grid>
-      </div>
-    </section>
+       <section> 
+          <h2 className='font-semibold text-lg text-left pb-4'>Recent Reviews & Rating</h2>
+          <div className='border p-5'>
+            <Grid container spacing={3}>
+              <Grid item xs={12} md={7}>
+                <div className='space-y-5'>
+                  {[1, 1, 1].map((item) => <ProductReviewCard />)}
+                </div>
+              </Grid>
+
+              <Grid item xs={5}>
+                <h1 className='text-xl font-semibold pb-2'>Product ratings</h1>
+
+                <div className='flex items-center space-x-3'>
+                  <Rating name="read-only" value={4.6} precision={.5} readOnly />
+                  <p className='opacity-60'>34390 Ratings</p>
+                </div>
+
+                <Box className="mt-5 space-y-3">
+                  <Grid container alignItems="center" gap={2}>
+                    <Grid items xs={2}>
+                      <p>Excellent</p>
+                    </Grid>
+                    <Grid item xs={7}>
+                      <LinearProgress sx={{ bgcolor: "Lightgray", borderRadius: 4, height: 7 }}
+                        variant="determinate" value={40} color="success" />
+
+                    </Grid>
+                  </Grid>
+
+                  <Grid container alignItems="center" gap={2}>
+                    <Grid items xs={2}>
+                      <p>Very Good</p>
+                    </Grid>
+                    <Grid item xs={7}>
+                      <LinearProgress sx={{ bgcolor: "Lightgray", borderRadius: 4, height: 7 }}
+                        variant="determinate" value={30} color="success" />
+
+                    </Grid>
+                  </Grid><Grid container alignItems="center" gap={2}>
+                    <Grid items xs={2}>
+                      <p>Good</p>
+                    </Grid>
+                    <Grid item xs={7}>
+                      <LinearProgress sx={{ bgcolor: "Lightgray", borderRadius: 4, height: 7, collor:"yellow" }}
+                        variant="determinate" value={25} />
+
+                    </Grid>
+                  </Grid><Grid container alignItems="center" gap={2}>
+                    <Grid items xs={2}>
+                      <p>Average</p>
+                    </Grid>
+                    <Grid item xs={7}>
+                      <LinearProgress sx={{ bgcolor: "Lightgray", borderRadius: 4, height: 7 }}
+                        variant="determinate" value={20} color="warning" />
+
+                    </Grid>
+                  </Grid><Grid container alignItems="center" gap={2}>
+                    <Grid items xs={2}>
+                      <p>Poor</p>
+                    </Grid>
+                    <Grid item xs={7}>
+                      <LinearProgress sx={{ bgcolor: "Lightgray", borderRadius: 4, height: 7 }}
+                        variant="determinate" value={15} color="error" />
+
+                    </Grid>
+                  </Grid>
+
+                </Box>
+
+              </Grid>
+
+            </Grid>
+          </div>
+        </section>
+        
       </div>
     </div>
   );

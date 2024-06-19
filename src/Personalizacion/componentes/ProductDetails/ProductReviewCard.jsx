@@ -10,17 +10,16 @@ const ProductReviewCard = () => {
         </Box>
       </Grid>
       <Grid item xs={11}>
-        <div className='space-y-2 text-left'>
-          <p className=''>Ramm</p>
-          <p>18/07/2024</p>
-          <Rating value={4.5} name='half-rating' />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Assumenda hic consequuntur sunt quibusdam magni architecto illum,
-          Eos!
-        </p>
+        <div className='space-y-2 px-4 text-left'>
+          <p className='font-semibold text-lg'>Ramm</p>
+          <p className='opacity-70'>18/07/2024</p>
+          <Rating value={4.5} name='half-rating' readOnly precision={0.5} />
+          <p>
+            Hace mucho no probaba Turrón, ¡una experiencia única!
+          </p>
         </div>
         
+
       </Grid>
     </Grid>
   );
