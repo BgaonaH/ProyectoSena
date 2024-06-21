@@ -2,8 +2,8 @@ import React from 'react'
 
 const HomeSectionCard = ({ product }) => {
   return (
-    <div className='cursor-pointer flex flex-col items-center  bg-white rounded-lg shadow-lg overflow-hidden w-[17rem] mx-0.5 
-    border border-black' >
+    <div className='cursor-pointer flex flex-col items-center  bg-white rounded-lg shadow-lg overflow-hidden w-[15rem] mx-0.5 
+    border border-gray-50 ' >
 
       <div className='h-[15rem] w-[10rem]'>
         <img className='object-cover object-top w-full h-full ' 

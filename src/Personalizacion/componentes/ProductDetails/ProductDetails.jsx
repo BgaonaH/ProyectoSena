@@ -3,6 +3,8 @@ import { StarIcon } from '@heroicons/react/20/solid';
 import { Radio, RadioGroup } from '@headlessui/react';
 import { Box, Button, Grid, LinearProgress, Rating } from '@mui/material';
 import ProductReviewCard from './ProductReviewCard';
+import { chicloso } from '../../Data/chicloso';
+import HomeSectionCard from '../HomeSectionCard/HomeSectionCard';
 
 const product = {
   name: 'Basic Tee 6-Pack',
@@ -264,34 +266,37 @@ export default function ProductDetail() {
                     <Grid item xs={7}>
                       <LinearProgress sx={{ bgcolor: "Lightgray", borderRadius: 4, height: 7 }}
                         variant="determinate" value={30} color="success" />
-
                     </Grid>
-                  </Grid><Grid container alignItems="center" gap={2}>
+                  </Grid>
+                  
+                  <Grid container alignItems="center" gap={2}>
                     <Grid items xs={2}>
                       <p>Good</p>
                     </Grid>
                     <Grid item xs={7}>
-                      <LinearProgress sx={{ bgcolor: "Lightgray", borderRadius: 4, height: 7, collor:"yellow" }}
+                      <LinearProgress sx={{ bgcolor: "Lightgray", borderRadius: 4, height: 7,  "& .MuiLinearProgress-barColorPrimary": {
+                        backgroundColor: "#FFFF00", // Amarillo en formato hexadecimal
+                      },  }}
                         variant="determinate" value={25} />
-
                     </Grid>
-                  </Grid><Grid container alignItems="center" gap={2}>
+                  </Grid>
+
+                  <Grid container alignItems="center" gap={2}>
                     <Grid items xs={2}>
                       <p>Average</p>
                     </Grid>
                     <Grid item xs={7}>
                       <LinearProgress sx={{ bgcolor: "Lightgray", borderRadius: 4, height: 7 }}
                         variant="determinate" value={20} color="warning" />
-
                     </Grid>
-                  </Grid><Grid container alignItems="center" gap={2}>
+                  </Grid>
+                  <Grid container alignItems="center" gap={2}>
                     <Grid items xs={2}>
                       <p>Poor</p>
                     </Grid>
                     <Grid item xs={7}>
                       <LinearProgress sx={{ bgcolor: "Lightgray", borderRadius: 4, height: 7 }}
                         variant="determinate" value={15} color="error" />
-
                     </Grid>
                   </Grid>
 
@@ -300,6 +305,13 @@ export default function ProductDetail() {
               </Grid>
 
             </Grid>
+          </div>
+        </section>
+        {/* Productos Similares*/ }
+        <section className='pt-10'>
+          <h2 className='py-5 text-lg font-bold text-left'>Productos Similares</h2>
+          <div className='flex flex-wrap space-y-5'>
+            {chicloso.map((item)=><HomeSectionCard product={item}/>)}
           </div>
         </section>
         
