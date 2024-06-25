@@ -7,6 +7,8 @@ import Product from './Personalizacion/componentes/Product/Product.jsx';
 import ProductDetail from './Personalizacion/componentes/ProductDetails/ProductDetails.jsx';
 import Cart from './Personalizacion/componentes/Cart/Cart.jsx';
 import Checkout from './Personalizacion/componentes/Checkout/Checkout.jsx'
+import Order from './Personalizacion/componentes/Order/Order.jsx';
+import OrderDetails from './Personalizacion/componentes/Order/OrderDetails.jsx';
 function App() {
   return (
     <div className="App">
@@ -17,7 +19,9 @@ function App() {
         {/*<Product/>*/}
         {/*<ProductDetail/>*/}
         {/*<Cart/>*/}
-        <Checkout/>
+        {/*<Checkout/>*/}
+        {/*<Order/>*/}
+        <OrderDetails/>
         <Footer/>
 
     </div>

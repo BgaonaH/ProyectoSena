@@ -1,9 +1,9 @@
 import React from "react";
 import MainCarrosel from "../Home carrosel/MainCarrosel";
 import HomeSectionCarrusel from "../HomeSectionCarrusel/HomeSectionCarrusel";
-import { chicloso } from "../../../Data/chicloso";
-import { dulces } from "../../../Data/dulces";
-import { galletas } from "../../../Data/galletas";
+import  chicloso  from "../../Data/chicloso";
+
+
 
 
 const HomePage = () => {
