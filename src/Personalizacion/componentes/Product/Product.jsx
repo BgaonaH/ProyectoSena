@@ -14,7 +14,7 @@ import {
 } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-import { chicloso } from '../../Data/chicloso'
+import { chicloso } from '../../../Data/chicloso'
 import ProductCard from './ProductCard'
 import {filters, singleFilter} from './FilterData'
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@mui/material'

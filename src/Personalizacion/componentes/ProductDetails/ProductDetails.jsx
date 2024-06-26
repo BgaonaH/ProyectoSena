@@ -3,8 +3,9 @@ import { StarIcon } from '@heroicons/react/20/solid';
 import { Radio, RadioGroup } from '@headlessui/react';
 import { Box, Button, Grid, LinearProgress, Rating } from '@mui/material';
 import ProductReviewCard from './ProductReviewCard';
-import { chicloso } from '../../Data/chicloso';
+import  {chicloso}  from '../../../Data/chicloso';
 import HomeSectionCard from '../HomeSectionCard/HomeSectionCard';
+import { useNavigate } from 'react-router-dom';
 
 const product = {
   name: 'Basic Tee 6-Pack',
@@ -53,7 +54,7 @@ function classNames(...classes) {
 export default function ProductDetail() {
 
   const [quantity, setQuantity] = useState(1); // Estado para mantener la cantidad de productos
-
+  const navigate=useNavigate();
   // Función para aumentar la cantidad de productos
   const increaseQuantity = () => {
     setQuantity(quantity + 1);
@@ -65,6 +66,10 @@ export default function ProductDetail() {
       setQuantity(quantity - 1);
     }
   };
+  
+  const handleAddToCart =()=>{
+      navigate("/cart");
+  }
 
   return (
     <div className="bg-white lg:px-20">
@@ -178,12 +183,9 @@ export default function ProductDetail() {
               </div>
 
               {/* Add to bag button */}
-              <Button variant='contained' sx={{
-                px: "2rem", py: "1rem,", bgcolor: "red",
+              <Button onClick={handleAddToCart} variant='contained' sx={{px: "2rem", py: "1rem,", bgcolor: "red",
                 '&:hover': { bgcolor: '#cc0000', },
-              }}
-
-              >
+              }}>
                 Agregar al carrito
               </Button>
             </div>

@@ -9,22 +9,22 @@ import Cart from './Personalizacion/componentes/Cart/Cart.jsx';
 import Checkout from './Personalizacion/componentes/Checkout/Checkout.jsx'
 import Order from './Personalizacion/componentes/Order/Order.jsx';
 import OrderDetails from './Personalizacion/componentes/Order/OrderDetails.jsx';
+import { Route, Router, Routes } from 'react-router-dom';
+import CustomerRouters from './Routers/CustomerRouters.jsx';
 function App() {
   return (
-    <div className="App">
-     <div>
-        <Navigation/>
-      </div>
-        {/*<HomePage/>*/}
-        {/*<Product/>*/}
-        {/*<ProductDetail/>*/}
-        {/*<Cart/>*/}
-        {/*<Checkout/>*/}
-        {/*<Order/>*/}
-        <OrderDetails/>
-        <Footer/>
+    
+      <div className="App">
 
-    </div>
+        <Routes>
+          <Route path='/*' element={<CustomerRouters />}></Route>
+        </Routes>
+
+
+
+
+      </div>
+    
   );
 }
 
